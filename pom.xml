@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://18.224.37.247:8000/repository/td_web_app_releases/</url>
+	      <url>http://3.133.59.48:8000/repository/td_web_app_releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://18.224.37.247:8000/repository/td_web_app_snapshots/</url>
+	      <url>http://3.133.59.48:8000/repository/td_web_app_snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
