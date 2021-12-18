@@ -14,7 +14,7 @@
 	Landmark Technology is a an ideal online training  platform for DevOps and Cloud Engineers. 
 	We offer interview preparations and job assistance. I will make 200K in 2022!! Hoorah
 	DevOps 26 will succeed
-	The shout of the King is in our midst. His name is JESUS.  HE IS OUR SUCCESS ACCESS KEY. QA/UAT</h2>
+	The shout of the King is in our midst. His name is JESUS.  HE IS OUR SUCCESS ACCESS KEY. PROD</h2>
 <hr>
 <div style="text-align: center;">
 	<span>
