@@ -1,0 +1,35 @@
+  node('master')
+  {
+   def mavenHome = tool name: 'maven3.8.4'
+  stage('1.git clone')
+    {
+  git 'https://github.com/lastsamurai-desu/maven-web-app'
+    }
+  stage('2.Maven-Build')
+    { 
+  sh "${mavenHome}/bin/mvn clean package"
+    }
+  stage('3.CodeQualityReport')
+    {
+  sh "${mavenHome}/bin/mvn sonar:sonar"
+    }
+  stage('4.UploadWarNexus')
+    {
+    //sh "${mavenHome}/bin/mvn clean deploy"
+    }
+  stage('5.DeployTomcat')
+    {
+   deploy adapters: [tomcat9(credentialsId: 'tomcatty', path: '', url: 'http://172.31.15.206:7000/')], contextPath: null, war: 'target/*.war'
+    }   
+  stage('6.Approval')
+    {
+    timeout(time:8, unit: 'HOURS')
+    {
+    input message: 'Please verify and approve'
+    }
+  stage('7.Prod-Deploy')
+    {
+   deploy adapters: [tomcat9(credentialsId: 'tomcatty', path: '', url: 'http://172.31.15.206:7000/')], contextPath: null, war: 'target/*.war'
+    }   
+  }
+  }
